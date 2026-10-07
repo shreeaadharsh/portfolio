@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shree Aadharsh K — Software Developer · AI/ML · Full Stack. Computer Science Engineering student building AI-powered applications, computer vision systems, and scalable full-stack platforms." />
+  <meta name="keywords" content="Shree Aadharsh K, Software Developer, AI ML, Full Stack Developer, Computer Vision, Generative AI, SLM, Portfolio" />
+  <meta name="author" content="Shree Aadharsh K" />
+  <meta property="og:title" content="Shree Aadharsh K | Software Developer · AI/ML · Full Stack" />
+  <meta property="og:description" content="I build AI-powered applications and full-stack systems — from computer vision and SLM-based analytics to real-time collaborative platforms." />
+  <meta property="og:type" content="website" />
+  <title>Shree Aadharsh K | Software Developer · AI/ML · Full Stack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════ LOADER ═══════════════════════════════ -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <div class="loader-logo">SA</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <span class="loader-text">Initializing...</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ BACKGROUND ═══════════════════════════ -->
+  <div class="bg-canvas" aria-hidden="true">
+    <canvas id="bgCanvas"></canvas>
+    <div class="bg-grid"></div>
+    <div class="bg-gradient-orb orb-1"></div>
+    <div class="bg-gradient-orb orb-2"></div>
+    <div class="bg-gradient-orb orb-3"></div>
+  </div>
+
+  <!-- ═══════════════════════════════ NAVBAR ════════════════════════════════ -->
+  <header id="navbar" class="navbar" role="banner">
+    <nav class="nav-container" role="navigation" aria-label="Main navigation">
+      <a href="#hero" class="nav-logo" aria-label="Shree Aadharsh K - Home">
+        <span class="logo-text">SA</span>
+        <span class="logo-dot"></span>
+      </a>
+
+      <ul class="nav-links" role="list" id="navLinks">
+        <li><a href="#hero"       class="nav-link active" data-section="hero">Home</a></li>
+        <li><a href="#about"      class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills"     class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects"   class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#education"  class="nav-link" data-section="education">Education</a></li>
+        <li><a href="#contact"    class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="mailto:shreeaadharsh4@gmail.com" class="btn-hire" aria-label="Hire me">
+          <span>Hire Me</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <ul class="mobile-nav-links" role="list">
+      <li><a href="#hero"       class="mobile-nav-link" data-section="hero">Home</a></li>
+      <li><a href="#about"      class="mobile-nav-link" data-section="about">About</a></li>
+      <li><a href="#skills"     class="mobile-nav-link" data-section="skills">Skills</a></li>
+      <li><a href="#projects"   class="mobile-nav-link" data-section="projects">Projects</a></li>
+      <li><a href="#experience" class="mobile-nav-link" data-section="experience">Experience</a></li>
+      <li><a href="#education"  class="mobile-nav-link" data-section="education">Education</a></li>
+      <li><a href="#contact"    class="mobile-nav-link" data-section="contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════ MAIN ════════════════════════════════ -->
+  <main id="main" role="main">
+
+    <!-- ─── HERO ─────────────────────────────────────────────────────────── -->
+    <section id="hero" class="section hero-section" aria-label="Hero introduction">
+      <div class="hero-content">
+        <div class="hero-text-col">
+
+          <div class="hero-eyebrow" data-animate>
+            <span class="eyebrow-line"></span>
+            <span class="eyebrow-text">HELLO, I'M</span>
+          </div>
+
+          <h1 class="hero-name" data-animate data-delay="100">
+            <span class="name-word">SHREE</span>
+            <span class="name-word accent">AADHARSH</span>
+            <span class="name-word">K</span>
+          </h1>
+
+          <!-- Fixed primary headline — exact as specified -->
+          <div class="hero-headline-wrap" data-animate data-delay="180">
+            <span class="hero-headline-static">Software Developer&nbsp;<span class="hl-sep">|</span>&nbsp;AI/ML&nbsp;<span class="hl-sep">|</span>&nbsp;Full Stack</span>
+          </div>
+
+          <p class="hero-bio" data-animate data-delay="280">
+            I build AI-powered applications and full-stack systems that solve practical problems — from computer vision and SLM-based analytics to real-time collaborative platforms.
+          </p>
+
+          <div class="hero-btns" data-animate data-delay="380">
+            <a href="#projects" class="btn btn-primary magnetic" id="viewWorkBtn">
+              <span>View My Work</span>
+              <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary magnetic" id="connectBtn">
+              <span>Let's Connect</span>
+            </a>
+          </div>
+
+          <div class="hero-socials" data-animate data-delay="480">
+            <a href="https://github.com/shreeaadharsh" target="_blank" rel="noopener noreferrer" class="social-chip" aria-label="GitHub Profile">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/shree-aadharsh-9254912b6/" target="_blank" rel="noopener noreferrer" class="social-chip" aria-label="LinkedIn Profile">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Identity Visual -->
+        <div class="hero-visual-col" data-animate data-delay="150">
+          <div class="identity-wrapper" id="identityWrapper">
+
+            <!-- Orbit system -->
+            <div class="orbit-system">
+              <!-- Outer orbit ring -->
+              <div class="orbit orbit-1">
+                <div class="orbit-node on-1" data-label="Python">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11.914 0C5.82 0 6.2 2.656 6.2 2.656l.007 2.752h5.814v.826H3.912S0 5.789 0 11.969c0 6.18 3.403 5.963 3.403 5.963h2.03v-2.868s-.109-3.403 3.345-3.403h5.768s3.234.052 3.234-3.126V3.126S18.28 0 11.914 0zm-3.21 1.81a1.036 1.036 0 1 1 0 2.073 1.036 1.036 0 0 1 0-2.073z"/><path d="M12.086 24c6.094 0 5.714-2.656 5.714-2.656l-.007-2.752H12v-.826h8.109S24 18.211 24 12.031c0-6.18-3.403-5.963-3.403-5.963h-2.03v2.868s.109 3.403-3.345 3.403H9.454s-3.234-.052-3.234 3.126v5.409S5.72 24 12.086 24zm3.21-1.81a1.036 1.036 0 1 1 0-2.073 1.036 1.036 0 0 1 0 2.073z"/></svg>
+                </div>
+                <div class="orbit-node on-2" data-label="Gen AI">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                </div>
+              </div>
+
+              <!-- Middle orbit ring -->
+              <div class="orbit orbit-2">
+                <div class="orbit-node on-3" data-label="React">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09c.122 0 .235.018.343.068.91.523 1.255 2.664.73 5.457-.83-.202-1.728-.37-2.673-.495-.562-.81-1.147-1.58-1.738-2.296 1.188-1.144 2.36-1.734 3.338-1.734zm-9.543 0c.976 0 2.147.59 3.335 1.733-.59.716-1.174 1.486-1.736 2.296-.944.124-1.842.293-2.672.496-.526-2.79-.176-4.93.733-5.455.106-.05.22-.07.34-.07zm4.773 5.051c.444-.028.89-.04 1.34-.04.45 0 .896.01 1.34.04.44.028.872.067 1.296.118.07.36.137.73.194 1.11.057.38.103.77.138 1.16-.45.05-.91.09-1.378.118-.47.028-.95.042-1.44.042-.49 0-.97-.014-1.44-.042-.468-.028-.928-.068-1.378-.118.035-.39.082-.78.138-1.16.057-.38.124-.75.194-1.11.424-.05.857-.09 1.296-.118zm-5.12 1.27c.275-.01.55-.01.825-.01.375 0 .748.01 1.12.03-.044.365-.08.73-.105 1.095.025.366.06.73.105 1.096-.372.02-.745.03-1.12.03-.275 0-.55 0-.825-.01a15.7 15.7 0 0 1-.62-.03c-.036-.366-.06-.73-.06-1.096 0-.365.024-.73.06-1.096a15.7 15.7 0 0 1 .62-.029zm10.24 0c.206 0 .415.01.62.03.036.365.06.73.06 1.095 0 .366-.024.73-.06 1.096a15.7 15.7 0 0 1-.62.03c-.275.01-.55.01-.825.01-.375 0-.748-.01-1.12-.03.044-.366.08-.73.105-1.096-.025-.366-.06-.73-.105-1.096.372-.02.745-.03 1.12-.03.275 0 .55 0 .825.01z"/></svg>
+                </div>
+                <div class="orbit-node on-4" data-label="CV">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+                </div>
+              </div>
+
+              <!-- Inner orbit ring -->
+              <div class="orbit orbit-3">
+                <div class="orbit-node on-5" data-label="Node.js">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M11.998 24c-.321 0-.641-.084-.922-.247l-2.936-1.737c-.438-.245-.224-.332-.08-.383.585-.203.703-.25 1.327-.604.065-.037.151-.023.218.017l2.256 1.339c.082.045.198.045.272 0l8.795-5.076c.082-.047.134-.141.134-.238V6.921c0-.099-.053-.192-.137-.242l-8.791-5.072c-.081-.047-.189-.047-.271 0L3.075 6.68c-.084.05-.138.144-.138.242v10.15c0 .097.054.189.137.236l2.408 1.39c1.307.654 2.108-.116 2.108-.891V7.787c0-.142.114-.253.256-.253h1.115c.139 0 .255.111.255.253v10.021c0 1.745-.95 2.745-2.604 2.745-.508 0-.909 0-2.026-.551L2.28 18.675c-.57-.329-.922-.943-.922-1.604V6.921c0-.661.353-1.275.922-1.603l8.795-5.08c.557-.315 1.296-.315 1.848 0l8.794 5.08c.57.329.924.943.924 1.603v10.15c0 .661-.354 1.275-.924 1.604l-8.794 5.076c-.282.164-.602.247-.924.247z"/></svg>
+                </div>
+                <div class="orbit-node on-6" data-label="AI/ML">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                </div>
+              </div>
+
+              <!-- Central identity card -->
+              <div class="identity-card glass-card" id="identityCard">
+                <div class="identity-initials">SA</div>
+                <div class="identity-glow"></div>
+              </div>
+            </div>
+
+            <!-- Status badge -->
+            <div class="identity-status">
+              <span class="status-dot"></span>
+              <span>Open to Software Development Opportunities</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator" aria-label="Scroll down">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ─── ABOUT ─────────────────────────────────────────────────────────── -->
+    <section id="about" class="section about-section" aria-label="About me">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-label">01 / About</span>
+          <h2 class="section-title">Who I Am</h2>
+          <p class="section-subtitle">The person behind the code</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text-col" data-reveal>
+            <div class="about-card glass-card">
+              <p class="about-p">
+                I'm <strong>Shree Aadharsh K</strong>, a Computer Science Engineering student graduating in 2027. I'm drawn to problems at the intersection of <em>AI/ML</em> and <em>practical software engineering</em> — where a well-trained model meets a well-built system.
+              </p>
+              <p class="about-p">
+                My work spans building computer vision pipelines for real-world detection tasks, designing SLM-based analytics tools, crafting real-time full-stack platforms, and writing clean backend APIs. I care deeply about both correctness and craft.
+              </p>
+              <p class="about-p">
+                Currently focused on <strong>Generative AI</strong>, <strong>Small Language Models</strong>, and <strong>real-time systems</strong> — bridging the gap between cutting-edge ML research and shipped, usable products.
+              </p>
+              <div class="about-highlight-row">
+                <div class="highlight-item">
+                  <span class="highlight-icon">🎓</span>
+                  <span>B.E. CSE · 2027</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-icon">🧠</span>
+                  <span>AI/ML Focus</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-icon">🌐</span>
+                  <span>Full Stack</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-icon">⚡</span>
+                  <span>Real-Time Systems</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-stats-col" data-reveal data-delay="150">
+            <div class="stat-cards">
+              <div class="stat-card glass-card">
+                <div class="stat-num counter" data-target="4">0</div>
+                <div class="stat-label">Featured Projects</div>
+                <div class="stat-sub">Across AI & Full Stack</div>
+              </div>
+              <div class="stat-card glass-card">
+                <div class="stat-num">2027</div>
+                <div class="stat-label">Graduating</div>
+                <div class="stat-sub">B.E. Computer Science</div>
+              </div>
+              <div class="stat-card glass-card">
+                <div class="stat-num counter" data-target="5">0</div>
+                <div class="stat-label">Tech Domains</div>
+                <div class="stat-sub">AI, CV, Full Stack, Backend, GenAI</div>
+              </div>
+              <div class="stat-card glass-card">
+                <div class="stat-num">∞</div>
+                <div class="stat-label">Curiosity</div>
+                <div class="stat-sub">Always building, always learning</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SKILLS ────────────────────────────────────────────────────────── -->
+    <section id="skills" class="section skills-section" aria-label="Technical skills">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-label">02 / Skills</span>
+          <h2 class="section-title">Technical Expertise</h2>
+          <p class="section-subtitle">Technologies I work with across the stack</p>
+        </div>
+
+        <div class="skills-grid" data-reveal>
+          <!-- AI / ML -->
+          <div class="skill-category glass-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">🤖</div>
+              <h3 class="skill-cat-name">AI / Machine Learning</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">TensorFlow</span>
+              <span class="skill-tag">PyTorch</span>
+              <span class="skill-tag">Scikit-learn</span>
+              <span class="skill-tag">Keras</span>
+              <span class="skill-tag">Pandas</span>
+              <span class="skill-tag">NumPy</span>
+              <span class="skill-tag">Matplotlib</span>
+            </div>
+          </div>
+
+          <!-- Computer Vision -->
+          <div class="skill-category glass-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">👁️</div>
+              <h3 class="skill-cat-name">Computer Vision</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">OpenCV</span>
+              <span class="skill-tag">YOLO</span>
+              <span class="skill-tag">Mediapipe</span>
+              <span class="skill-tag">ResNet</span>
+              <span class="skill-tag">EfficientNet</span>
+              <span class="skill-tag">DenseNet</span>
+              <span class="skill-tag">CNNs</span>
+            </div>
+          </div>
+
+          <!-- Gen AI -->
+          <div class="skill-category glass-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">✨</div>
+              <h3 class="skill-cat-name">Generative AI</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">SLMs</span>
+              <span class="skill-tag">LLMs</span>
+              <span class="skill-tag">Gemma 2B</span>
+              <span class="skill-tag">Ollama</span>
+              <span class="skill-tag">LangChain</span>
+              <span class="skill-tag">Hugging Face</span>
+              <span class="skill-tag">Prompt Engineering</span>
+            </div>
+          </div>
+
+          <!-- Full Stack -->
+          <div class="skill-category glass-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">🌐</div>
+              <h3 class="skill-cat-name">Full Stack Development</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Express</span>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">WebSocket</span>
+              <span class="skill-tag">REST APIs</span>
+            </div>
+          </div>
+
+          <!-- Backend & Databases -->
+          <div class="skill-category glass-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">⚙️</div>
+              <h3 class="skill-cat-name">Backend & Databases</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">FastAPI</span>
+              <span class="skill-tag">Flask</span>
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">MongoDB</span>
+              <span class="skill-tag">Redis</span>
+              <span class="skill-tag">Firebase</span>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-category glass-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">🛠️</div>
+              <h3 class="skill-cat-name">Tools & Workflow</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">GitHub</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Linux</span>
+              <span class="skill-tag">Jupyter</span>
+              <span class="skill-tag">Postman</span>
+              <span class="skill-tag">VS Code</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── PROJECTS ──────────────────────────────────────────────────────── -->
+    <section id="projects" class="section projects-section" aria-label="Featured Projects">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-label">03 / Projects</span>
+          <h2 class="section-title">Featured Work</h2>
+          <p class="section-subtitle">AI systems and full-stack software I've designed and built</p>
+        </div>
+
+        <div class="projects-grid" data-reveal>
+
+          <!-- ── Project 1: SyncSpace ───────────────────────────────────── -->
+          <article class="project-card glass-card p-featured"
+                   data-project="syncspace"
+                   aria-label="Project: SyncSpace"
+                   role="button" tabindex="0">
+            <div class="project-card-inner">
+              <div class="project-top-row">
+                <div class="project-domain-badge">Real-Time Collaboration · Full Stack</div>
+                <div class="project-actions">
+                  <a href="#" class="project-link-btn" aria-label="View on GitHub" title="GitHub (link coming soon)" onclick="return false;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="project-icon-wrap project-icon-collab">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><circle cx="8" cy="10" r="1"/><circle cx="12" cy="10" r="1"/><circle cx="16" cy="10" r="1"/></svg>
+              </div>
+
+              <h3 class="project-title">SyncSpace</h3>
+              <p class="project-desc">
+                A real-time collaborative workspace where multiple users can code, draw, and communicate simultaneously with conflict-free synchronization using CRDT algorithms.
+              </p>
+
+              <div class="project-capabilities">
+                <span class="cap-chip">⚡ Real-time sync</span>
+                <span class="cap-chip">🔀 CRDT / Yjs</span>
+                <span class="cap-chip">🔒 Auth system</span>
+              </div>
+
+              <div class="project-tech-row">
+                <span class="tech-chip">React</span>
+                <span class="tech-chip">Node.js</span>
+                <span class="tech-chip">WebSocket</span>
+                <span class="tech-chip">Yjs</span>
+                <span class="tech-chip">Express</span>
+                <span class="tech-chip">MongoDB</span>
+              </div>
+
+              <button class="btn-case-study" data-project="syncspace">
+                View Case Study
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </button>
+            </div>
+            <div class="project-card-glow"></div>
+          </article>
+
+          <!-- ── Project 2: SLM Chatbot ────────────────────────────────── -->
+          <article class="project-card glass-card"
+                   data-project="slm-chatbot"
+                   aria-label="Project: SLM Business Analytics Chatbot"
+                   role="button" tabindex="0">
+            <div class="project-card-inner">
+              <div class="project-top-row">
+                <div class="project-domain-badge">Generative AI · Backend · Security</div>
+                <div class="project-actions">
+                  <a href="#" class="project-link-btn" aria-label="View on GitHub" title="GitHub (link coming soon)" onclick="return false;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="project-icon-wrap project-icon-ai">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><circle cx="9" cy="10" r="1"/><circle cx="12" cy="10" r="1"/><circle cx="15" cy="10" r="1"/></svg>
+              </div>
+
+              <h3 class="project-title">SLM-Based Business Analytics Chatbot</h3>
+              <p class="project-desc">
+                An NLP-driven analytics interface powered by Gemma 2B (via Ollama) that translates natural language business questions into validated SQL queries with injection prevention.
+              </p>
+
+              <div class="project-capabilities">
+                <span class="cap-chip">🧠 Gemma 2B</span>
+                <span class="cap-chip">🛡️ SQL Injection Guard</span>
+                <span class="cap-chip">📊 Business Insights</span>
+              </div>
+
+              <div class="project-tech-row">
+                <span class="tech-chip">Python</span>
+                <span class="tech-chip">Gemma 2B</span>
+                <span class="tech-chip">Ollama</span>
+                <span class="tech-chip">FastAPI</span>
+                <span class="tech-chip">MySQL</span>
+                <span class="tech-chip">React</span>
+              </div>
+
+              <button class="btn-case-study" data-project="slm-chatbot">
+                View Case Study
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </button>
+            </div>
+            <div class="project-card-glow"></div>
+          </article>
+
+          <!-- ── Project 3: Diabetic Retinopathy ───────────────────────── -->
+          <article class="project-card glass-card"
+                   data-project="retinopathy"
+                   aria-label="Project: Diabetic Retinopathy Detection"
+                   role="button" tabindex="0">
+            <div class="project-card-inner">
+              <div class="project-top-row">
+                <div class="project-domain-badge">AI · Deep Learning · Computer Vision</div>
+                <div class="project-actions">
+                  <a href="#" class="project-link-btn" aria-label="View on GitHub" title="GitHub (link coming soon)" onclick="return false;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="project-icon-wrap project-icon-cv">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/></svg>
+              </div>
+
+              <h3 class="project-title">Non-Invasive Diabetic Retinopathy Detection</h3>
+              <p class="project-desc">
+                An ensemble deep learning system combining ResNet50, DenseNet121, and EfficientNetB3 to classify retinal fundus images for diabetic retinopathy grading — non-invasively.
+              </p>
+
+              <div class="project-capabilities">
+                <span class="cap-chip">🔬 Ensemble Model</span>
+                <span class="cap-chip">📷 Fundus Image Analysis</span>
+                <span class="cap-chip">🏥 5-Class Grading</span>
+              </div>
+
+              <div class="project-tech-row">
+                <span class="tech-chip">Python</span>
+                <span class="tech-chip">TensorFlow</span>
+                <span class="tech-chip">ResNet50</span>
+                <span class="tech-chip">DenseNet121</span>
+                <span class="tech-chip">EfficientNetB3</span>
+                <span class="tech-chip">OpenCV</span>
+              </div>
+
+              <button class="btn-case-study" data-project="retinopathy">
+                View Case Study
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </button>
+            </div>
+            <div class="project-card-glow"></div>
+          </article>
+
+          <!-- ── Project 4: Driver Drowsiness ──────────────────────────── -->
+          <article class="project-card glass-card"
+                   data-project="drowsiness"
+                   aria-label="Project: Driver Drowsiness Detection"
+                   role="button" tabindex="0">
+            <div class="project-card-inner">
+              <div class="project-top-row">
+                <div class="project-domain-badge">Computer Vision · Real-Time AI</div>
+                <div class="project-actions">
+                  <a href="#" class="project-link-btn" aria-label="View on GitHub" title="GitHub (link coming soon)" onclick="return false;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="project-icon-wrap project-icon-rt">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg>
+              </div>
+
+              <h3 class="project-title">Driver Drowsiness Detection System</h3>
+              <p class="project-desc">
+                A real-time computer vision system that monitors driver eye activity through facial landmark detection, calculates Eye Aspect Ratio (EAR), and triggers an alert before fatigue becomes dangerous.
+              </p>
+
+              <div class="project-capabilities">
+                <span class="cap-chip">🎥 Live Video Feed</span>
+                <span class="cap-chip">👁️ EAR Algorithm</span>
+                <span class="cap-chip">🚨 Real-time Alert</span>
+              </div>
+
+              <div class="project-tech-row">
+                <span class="tech-chip">Python</span>
+                <span class="tech-chip">OpenCV</span>
+                <span class="tech-chip">Mediapipe</span>
+                <span class="tech-chip">dlib</span>
+                <span class="tech-chip">NumPy</span>
+              </div>
+
+              <button class="btn-case-study" data-project="drowsiness">
+                View Case Study
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </button>
+            </div>
+            <div class="project-card-glow"></div>
+          </article>
+
+        </div>
+
+        <div class="projects-footer" data-reveal>
+          <a href="https://github.com/shreeaadharsh" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            <span>View All Projects on GitHub</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── EXPERIENCE ─────────────────────────────────────────────────────── -->
+    <section id="experience" class="section experience-section" aria-label="Work experience">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-label">04 / Experience</span>
+          <h2 class="section-title">Experience</h2>
+          <p class="section-subtitle">My professional journey</p>
+        </div>
+
+        <div class="timeline" data-reveal>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role"><em class="placeholder-field">[ Add Role Title ]</em></h3>
+                  <p class="timeline-company"><em class="placeholder-field">[ Add Company / Organization ]</em></p>
+                </div>
+                <span class="timeline-period"><em class="placeholder-field">[ Month YYYY – Month YYYY ]</em></span>
+              </div>
+              <ul class="timeline-bullets">
+                <li><em class="placeholder-field">[ Describe key responsibility or achievement ]</em></li>
+                <li><em class="placeholder-field">[ Add another key point ]</em></li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="tech-chip"><em>[ Tech Used ]</em></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role"><em class="placeholder-field">[ Add Another Role ]</em></h3>
+                  <p class="timeline-company"><em class="placeholder-field">[ Add Company / Organization ]</em></p>
+                </div>
+                <span class="timeline-period"><em class="placeholder-field">[ Month YYYY – Month YYYY ]</em></span>
+              </div>
+              <ul class="timeline-bullets">
+                <li><em class="placeholder-field">[ Describe key responsibility or achievement ]</em></li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="tech-chip"><em>[ Tech Used ]</em></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="experience-note" data-reveal>
+          <em>Experience section is ready to be updated with actual roles, internships, and projects.</em>
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── EDUCATION ─────────────────────────────────────────────────────── -->
+    <section id="education" class="section education-section" aria-label="Education">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-label">05 / Education</span>
+          <h2 class="section-title">Education</h2>
+          <p class="section-subtitle">Academic foundation</p>
+        </div>
+
+        <div class="education-cards" data-reveal>
+          <div class="edu-card glass-card primary-edu">
+            <div class="edu-card-left">
+              <div class="edu-icon">🎓</div>
+              <div class="edu-timeline-line"></div>
+            </div>
+            <div class="edu-card-right">
+              <div class="edu-badge">Current</div>
+              <h3 class="edu-degree">Bachelor of Engineering</h3>
+              <p class="edu-major">Computer Science &amp; Engineering</p>
+              <p class="edu-institution"><em class="placeholder-field">[ College / University Name ]</em></p>
+              <p class="edu-period">2023 – 2027</p>
+              <div class="edu-highlights">
+                <div class="edu-highlight-item">
+                  <span class="edu-hl-label">Focus Areas</span>
+                  <span class="edu-hl-val">AI/ML, Full Stack, Systems</span>
+                </div>
+                <div class="edu-highlight-item">
+                  <span class="edu-hl-label">CGPA</span>
+                  <span class="edu-hl-val"><em class="placeholder-field">[ X.XX / 10 ]</em></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CONTACT ───────────────────────────────────────────────────────── -->
+    <section id="contact" class="section contact-section" aria-label="Contact">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-label">06 / Contact</span>
+          <h2 class="section-title">Let's Build Together</h2>
+          <p class="section-subtitle">Open to opportunities, collaborations, and conversations</p>
+        </div>
+
+        <div class="contact-grid" data-reveal>
+          <div class="contact-info-col">
+            <div class="contact-card glass-card">
+              <h3 class="contact-card-title">Get In Touch</h3>
+              <p class="contact-card-desc">
+                Whether you're a recruiter looking for a motivated developer, a team seeking a collaborator, or someone with an interesting project — I'd love to hear from you.
+              </p>
+              <div class="contact-links">
+                <a href="mailto:shreeaadharsh4@gmail.com" class="contact-link-item" id="emailContact">
+                  <div class="contact-link-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  </div>
+                  <div>
+                    <span class="contact-link-label">Email</span>
+                    <span class="contact-link-val">shreeaadharsh4@gmail.com</span>
+                  </div>
+                </a>
+                <a href="https://github.com/shreeaadharsh" target="_blank" rel="noopener noreferrer" class="contact-link-item" id="githubContact">
+                  <div class="contact-link-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                  </div>
+                  <div>
+                    <span class="contact-link-label">GitHub</span>
+                    <span class="contact-link-val">github.com/shreeaadharsh</span>
+                  </div>
+                </a>
+                <a href="https://www.linkedin.com/in/shree-aadharsh-9254912b6/" target="_blank" rel="noopener noreferrer" class="contact-link-item" id="linkedinContact">
+                  <div class="contact-link-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  </div>
+                  <div>
+                    <span class="contact-link-label">LinkedIn</span>
+                    <span class="contact-link-val">Shree Aadharsh K</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-col">
+            <form class="contact-form glass-card" id="contactForm" novalidate>
+              <h3 class="contact-form-title">Send a Message</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contactName" class="form-label">Name</label>
+                  <input type="text" id="contactName" name="name" class="form-input" placeholder="Your name" autocomplete="name" required />
+                </div>
+                <div class="form-group">
+                  <label for="contactEmail" class="form-label">Email</label>
+                  <input type="email" id="contactEmail" name="email" class="form-input" placeholder="your@email.com" autocomplete="email" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="contactSubject" class="form-label">Subject</label>
+                <input type="text" id="contactSubject" name="subject" class="form-input" placeholder="What's this about?" required />
+              </div>
+              <div class="form-group">
+                <label for="contactMessage" class="form-label">Message</label>
+                <textarea id="contactMessage" name="message" class="form-textarea" rows="5" placeholder="Your message..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary form-submit" id="contactSubmitBtn">
+                <span class="btn-text">Send Message</span>
+                <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+              <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner container">
+      <div class="footer-left">
+        <span class="footer-logo">SA</span>
+        <span class="footer-name">Shree Aadharsh K</span>
+      </div>
+      <p class="footer-copy">© 2024 Shree Aadharsh K. Crafted with precision.</p>
+      <div class="footer-links">
+        <a href="https://github.com/shreeaadharsh" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+        <a href="https://www.linkedin.com/in/shree-aadharsh-9254912b6/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+        <a href="mailto:shreeaadharsh4@gmail.com" aria-label="Email">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════ PROJECT MODAL ════════════════════════════ -->
+  <div id="projectModal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Project details" aria-hidden="true">
+    <div class="modal-container glass-card" id="modalContainer">
+      <button class="modal-close" id="modalClose" aria-label="Close project details">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="modal-content" id="modalContent">
+        <!-- Filled dynamically by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom cursor -->
+  <div class="cursor-follower" id="cursorFollower" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
